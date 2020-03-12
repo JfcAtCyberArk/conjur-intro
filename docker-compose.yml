@@ -1,9 +1,10 @@
 version: "3"
 services:
   conjur:
-    image: registry2.itci.conjur.net/conjur-appliance:${IMAGE_TAG}
+    image: registry2.itci.conjur.net/conjur-appliance:5.7.2-20200311203146-4e85e30
     ports:
       - "443:443"
+      - "444:444"
     security_opt:
         - "seccomp:./seccomp.json"
     volumes:
